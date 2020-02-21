@@ -1,0 +1,16 @@
+language: node_js
+node_js: 
+  - 10
+branches:
+  only:
+  - master
+cache: 
+  directories:
+    - node_modules
+script: 
+  - npm run build
+deploy:
+  provider: heroku
+  app: "todo-vue-test12"
+  api_key:
+    secure: "MmgmvxJEH7DPmSoQDEPd4SmDKjM0KQLrUuAfLW81Ictd+yfLf/taa5jVF0NRnL4zMT0C8P03JGVFRZRlXiDDtiFyVbnLJb1R/dcE3DZw/nX0/pmChIPBfak5DLgCwJYutJndaUwPXdmCQdsLD2Bk9lQFgY7UWme8CwG4DXogff4waHFdrOj+iQnHYBNVU/m+ZNGRjYn0zsVfWE5IUq4xG8ZumxkRj3CKe5PsyFhj/COZ1tkLWCPSaNwp0X9XFInhkw1YtIV5O8O0XpM9pO+nJr7cEOqTetR7+En+WPXWW0rvIbsukNlCgvHluG1gyY37V1RFKYb86IZOVFt7PZH0uRO5LR/RAGHeUpy41Vz5nAhK3aV5WHRzG26gKTYjvUUV1gVcBJ0cHQJDKe8WyI8+CZsHsfwE5tO/9mOI+Vtg+4VDc9YqH+U+36NZtWlZ5jkkBoYeiJ3LFsn9uFUvJvaOsv1PNCFAoa25TOeKuFLFvAsmT+/J6wDZ9/QS9M07B3K3ROsQ8lGEV6SqcW4teUupl8Bx8E3ur0n54W7h9Nz2Z0ugRPSuV47UGWt2uSwRfN5JvbYuMAJ+r+HocWBnTQyN+21VdcPra/SZJCft9uESvX3aZRg1BdPmtENGIO3Hq3SfdBIOrpE3og+yFg7Xfv8qPB32KmWfZ6DY86qX3NqPBjY="
